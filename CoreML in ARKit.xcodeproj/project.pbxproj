@@ -13,8 +13,9 @@
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
-		DA66DB431F9BADEE007386BB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */; };
 		DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA66DB441F9BB285007386BB /* dogBreed.mlmodel */; };
+		DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */; };
+		DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* BreedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		DA66DB441F9BB285007386BB /* dogBreed.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = dogBreed.mlmodel; sourceTree = SOURCE_ROOT; };
+		DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundBreedView.swift; sourceTree = "<group>"; };
+		DA73C81C1F9BECD100622166 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +62,16 @@
 		AEEC85631F18B8C600D43B9B /* CoreML in ARKit */ = {
 			isa = PBXGroup;
 			children = (
+				DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */,
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
 				AEEC85661F18B8C600D43B9B /* art.scnassets */,
 				AEEC85681F18B8C600D43B9B /* ViewController.swift */,
+				DA73C81C1F9BECD100622166 /* BreedViewController.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
 				DA66DB441F9BB285007386BB /* dogBreed.mlmodel */,
-				DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -145,9 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */,
 				DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */,
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
-				DA66DB431F9BADEE007386BB /* Inceptionv3.mlmodel in Sources */,
+				DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

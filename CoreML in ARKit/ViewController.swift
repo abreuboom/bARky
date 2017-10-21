@@ -14,6 +14,10 @@ import Photos
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
+    var active = true
+    
+    @IBOutlet weak var foundBreedView: FoundBreedView!
+    
     // SCENE
     @IBOutlet var sceneView: ARSCNView!
     let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
@@ -39,7 +43,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
         
-        // Enable Default Lighting - makes the 3D text a bit poppier.
+        // Enable Default Lighting - makes the 3D text a bit seguepoppier.
         sceneView.autoenablesDefaultLighting = true
         
         //////////////////////////////////////////////////
@@ -73,6 +77,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Run the view's session
         sceneView.session.run(configuration)
+        active = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,6 +85,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        active = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,6 +124,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let node : SCNNode = createNewBubbleParentNode(latestPrediction)
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
+            foundBreedView.breedLabel?.text = latestPrediction
         }
     }
     
@@ -205,13 +212,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func loopCoreMLUpdate() {
         // Continuously run CoreML whenever it's ready. (Preventing 'hiccups' in Frame Rate)
-        
+        if active == true {
         dispatchQueueML.async {
             // 1. Run Update.
             self.updateCoreML()
             
             // 2. Loop this function.
             self.loopCoreMLUpdate()
+        }
         }
         
     }
@@ -239,6 +247,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             print(classifications)
             print("--")
             
+            
             // Display Debug Text on screen
             var debugText:String = ""
             debugText += classifications
@@ -250,6 +259,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             objectName = objectName.components(separatedBy: ",")[0]
             self.latestPrediction = objectName
             
+            self.foundBreedView.breedLabel?.text = objectName
         }
     }
     
@@ -276,6 +286,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         
     }
+    
+    @IBAction func showMoreOfBreed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toBreed", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBreed" {
+            let breedViewController = segue.destination as! BreedViewController
+            let foundBreed = foundBreedView.breedLabel?.text
+            breedViewController.breed = foundBreed
+        }
+    }
+    
 }
 
 extension UIImage {
