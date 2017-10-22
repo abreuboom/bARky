@@ -16,8 +16,6 @@ class OnboardingPager : UIPageViewController, UIPageViewControllerDelegate {
         // I can't figure out how to do this in the Storyboard!
         dataSource = self
         delegate = self
-        // this sets the background color of the built-in paging dots
-        view.backgroundColor = .darkGray
         
         // This is the starting point.  Start with step zero.
         setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)

@@ -13,13 +13,15 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import CoreLocation
 
-class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
     var breed: String?
     var pets: [[String:Any]] = []
-    @IBOutlet weak var topLabel: UILabel!
+    let locationManager = CLLocationManager()
     
+    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
@@ -33,22 +35,23 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
         gestureDown.direction = .down
         topView.addGestureRecognizer(gestureDown)
         
-        DispatchQueue.main.async() {
-            self.tableView.reloadData()
-        }
-        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        for _ in 0...5 {
-            getPetOfBreed(breed: breed!, completion: { (success) in
-                if success == true {
-                    self.tableView.reloadData()
-                }
-            })
-            
+        DispatchQueue.main.async() {
+            self.tableView.reloadData()
         }
+        topView.roundCorners(corners: [.topLeft, .topRight], radius: 25)
+        getPetOfBreed(breed: breed!, completion: { (success) in
+            if success == true {
+                self.tableView.reloadData()
+            }
+        })
         topLabel.text = "\(breed!)'s Near You"
     }
     
@@ -81,7 +84,7 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
                        completion: @escaping (_ success: Bool) -> ()) {
         let api_key = "6031e303070ca81af94d5b194e8c112e"
         let breedName = String.lowercased(breed)().components(separatedBy: " ").first
-        let petFinderEndpoint: String = "https://api.petfinder.com/pet.getRandom?key=\(api_key)&format=json&output=basic&breed=\(breedName!)"
+        let petFinderEndpoint: String = "https://api.petfinder.com/pet.find?key=\(api_key)&format=json&output=basic&count=6&breed=\(breedName!)&location=MA"
         print(petFinderEndpoint)
         guard let url = URL(string: petFinderEndpoint) else {
             print("Error: cannot create URL")
@@ -115,8 +118,11 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 // let's just print it to prove we can access it
                 print("success")
                 let petData = dict["petfinder"] as! [String: Any]
-                let pet = petData["pet"] as! [String: Any]
-                self.pets.append(pet)
+                let petsDict = petData["pets"] as! [String: Any]
+                let pets = petsDict["pet"] as! [[String: Any]]
+                for pet in pets {
+                    self.pets.append(pet)
+                }
                 completion(true)
             } catch  {
                 print("error trying to convert data to JSON???")
@@ -135,6 +141,9 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.dismiss(animated: true, completion: nil)
     }
     
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        print("Location manager error: \(error.localizedDescription)")
+    }
     
     /*
      // MARK: - Navigation
