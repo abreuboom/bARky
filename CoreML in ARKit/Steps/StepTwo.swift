@@ -10,8 +10,16 @@ import UIKit
 
 class StepTwo: UIViewController {
     
+    @IBOutlet weak var nearYouView: FoundBreedView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nearYouView.roundCorners(corners: .allCorners, radius: 25)
+        
+//        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseInOut, .autoreverse, .repeat], animations: {
+//            self.nearYouView.transform = CGAffineTransform(scaleX: 1.02, y: 1.02)
+//        }, completion: nil)
         
         // Do any additional setup after loading the view.
     }

@@ -153,7 +153,7 @@
                                     <constraint firstAttribute="width" secondItem="cFl-ty-3oL" secondAttribute="height" multiplier="1:1" id="8z5-Kd-jVh"/>
                                     <constraint firstAttribute="width" constant="64" id="aSt-u7-GG8"/>
                                 </constraints>
-                                <state key="normal" image="agree"/>
+                                <state key="normal" image="ok"/>
                                 <connections>
                                     <action selector="maxVolume:" destination="Hye-Ul-0rT" eventType="touchUpInside" id="Lqm-0U-wVp"/>
                                     <segue destination="BV1-FR-VrT" kind="presentation" identifier="toAR" id="B60-HW-2jA"/>
@@ -176,7 +176,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="myS-hH-2wv" firstAttribute="leading" secondItem="rQo-Q7-XnP" secondAttribute="leading" constant="16" id="Iov-gA-yNW"/>
                                     <constraint firstItem="p9r-Ke-Pma" firstAttribute="leading" secondItem="myS-hH-2wv" secondAttribute="trailing" constant="16" id="cdF-ts-p7z"/>
@@ -201,8 +201,8 @@
                                 <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to start!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srz-J3-Yed">
-                                <rect key="frame" x="120.5" y="501" width="133.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to start!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srz-J3-Yed">
+                                <rect key="frame" x="115.5" y="501" width="145" height="22"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -226,6 +226,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="geN-7r-i8l"/>
                     </view>
+                    <connections>
+                        <outlet property="nearYouView" destination="rQo-Q7-XnP" id="D3z-ho-iTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pID-4Y-dfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,7 +252,7 @@
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ARViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="arViewController" id="BV1-FR-VrT" customClass="ARViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tix-nH-sfG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -434,10 +437,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="agree" width="128" height="128"/>
         <image name="barky" width="146" height="124"/>
         <image name="low vol" width="128" height="128"/>
         <image name="max vol" width="128" height="128"/>
         <image name="med vol" width="128" height="128"/>
+        <image name="ok" width="128" height="128"/>
     </resources>
 </document>

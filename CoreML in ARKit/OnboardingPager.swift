@@ -33,15 +33,15 @@ class OnboardingPager : UIPageViewController, UIPageViewControllerDelegate {
         return storyboard!.instantiateViewController(withIdentifier: "StepTwo") as! StepTwo
     }
     
-    func getStepThree() -> StepThree {
-        return storyboard!.instantiateViewController(withIdentifier: "StepThree") as! StepThree
+    func getStepThree() -> ARViewController {
+        return storyboard!.instantiateViewController(withIdentifier: "arViewController") as! ARViewController
     }
 }
 
 extension OnboardingPager : UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController is StepThree {
+        if viewController is ARViewController {
             return getStepTwo()
         } else if viewController is StepTwo {
             return getStepOne()
