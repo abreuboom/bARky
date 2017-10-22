@@ -11,11 +11,13 @@
 //  24e5915fd5b36e8d7b99d9220805a8bb
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var breed: String?
-    var dogs: [String] = []
+    var pets: [[String:Any]] = []
     @IBOutlet weak var topLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -35,7 +37,14 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getPetsOfBreed(breed: breed!)
+        for _ in 0...5 {
+            getPetOfBreed(breed: breed!, completion: { (success) in
+                if success == true {
+                    self.tableView.reloadData()
+                }
+            })
+            
+        }
         topLabel.text = "\(breed!)'s Near You"
     }
     
@@ -48,7 +57,7 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogs.count
+        return pets.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,14 +65,19 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "petCell") as! PetCell
+        
+        let pet = pets[indexPath.row]
+        cell.pet = pet
+        
         return cell
     }
     
-    func getPetsOfBreed(breed: String) {
+    func getPetOfBreed(breed: String,
+                       completion: @escaping (_ success: Bool) -> ()) {
         let api_key = "6031e303070ca81af94d5b194e8c112e"
-        let breedName = String.lowercased(breed)().components(separatedBy: .whitespaces).joined()
-        let petFinderEndpoint: String = "https://api.petfinder.com/pet.getRandom?key=\(api_key)&breed=\(breedName)&output=basic"
+        let breedName = String.lowercased(breed)().components(separatedBy: " ").first
+        let petFinderEndpoint: String = "https://api.petfinder.com/pet.getRandom?key=\(api_key)&format=json&output=basic&breed=\(breedName!)"
         print(petFinderEndpoint)
         guard let url = URL(string: petFinderEndpoint) else {
             print("Error: cannot create URL")
@@ -88,7 +102,7 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
             // parse the result as JSON, since that's what the API provides
             do {
                 print(responseData)
-                guard let pet = try JSONSerialization.jsonObject(with: responseData, options: [])
+                guard let dict = try JSONSerialization.jsonObject(with: responseData, options: [])
                     as? [String: Any] else {
                         print("error trying to convert data to JSON")
                         return
@@ -96,14 +110,16 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 // now we have the todo
                 // let's just print it to prove we can access it
                 print("success")
-                print(pet)
+                let petData = dict["petfinder"] as! [String: Any]
+                let pet = petData["pet"] as! [String: Any]
+                self.pets.append(pet)
+                completion(true)
             } catch  {
                 print("error trying to convert data to JSON???")
                 return
             }
         }
         task.resume()
-        
     }
     
     override func didReceiveMemoryWarning() {

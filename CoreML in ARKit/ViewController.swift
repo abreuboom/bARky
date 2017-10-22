@@ -295,7 +295,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if segue.identifier == "toBreed" {
             let breedViewController = segue.destination as! BreedViewController
             let foundBreed = foundBreedView.breedLabel?.text
-            breedViewController.breed = foundBreed
+            breedViewController.breed = foundBreed?.trimmingCharacters(in: .whitespaces)
         }
     }
     
