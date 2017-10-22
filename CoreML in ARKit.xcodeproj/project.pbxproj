@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D90B2451F9BF77D00EA0942 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */; };
+		5D90B2501F9C235500EA0942 /* StepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B24F1F9C235500EA0942 /* StepZero.swift */; };
+		5D90B2521F9C237400EA0942 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2511F9C237400EA0942 /* StepOne.swift */; };
+		5D90B2541F9C238A00EA0942 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2531F9C238A00EA0942 /* StepTwo.swift */; };
+		5D90B2561F9C239B00EA0942 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2551F9C239B00EA0942 /* StepThree.swift */; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
 		AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC85661F18B8C600D43B9B /* art.scnassets */; };
 		AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ViewController.swift */; };
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
+=======
 		D45AD0EC70694144094FEF6E /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */; };
+>>>>>>> e5c7e04412fad99658bdf5561bc1c26938812467
 		DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA66DB441F9BB285007386BB /* dogBreed.mlmodel */; };
 		DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */; };
 		DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* BreedViewController.swift */; };
@@ -21,9 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
+		5D90B24F1F9C235500EA0942 /* StepZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepZero.swift; sourceTree = "<group>"; };
+		5D90B2511F9C237400EA0942 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
+		5D90B2531F9C238A00EA0942 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
+		5D90B2551F9C239B00EA0942 /* StepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
+=======
 		199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.release.xcconfig"; sourceTree = "<group>"; };
 		2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
 		636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> e5c7e04412fad99658bdf5561bc1c26938812467
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -50,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D90B24E1F9C21B800EA0942 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				5D90B24F1F9C235500EA0942 /* StepZero.swift */,
+				5D90B2511F9C237400EA0942 /* StepOne.swift */,
+				5D90B2531F9C238A00EA0942 /* StepTwo.swift */,
+				5D90B2551F9C239B00EA0942 /* StepThree.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 		AEEC85581F18B8C600D43B9B = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +98,21 @@
 		AEEC85631F18B8C600D43B9B /* CoreML in ARKit */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				5D90B24E1F9C21B800EA0942 /* Steps */,
+=======
 				DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */,
+>>>>>>> e5c7e04412fad99658bdf5561bc1c26938812467
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
 				AEEC85661F18B8C600D43B9B /* art.scnassets */,
 				AEEC85681F18B8C600D43B9B /* ViewController.swift */,
 				DA73C81C1F9BECD100622166 /* BreedViewController.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
+<<<<<<< HEAD
+				5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */,
+=======
 				DA73C81E1F9C111800622166 /* PetCell.swift */,
+>>>>>>> e5c7e04412fad99658bdf5561bc1c26938812467
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
@@ -234,12 +269,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				5D90B2541F9C238A00EA0942 /* StepTwo.swift in Sources */,
+				DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */,
+				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
+				5D90B2451F9BF77D00EA0942 /* OnboardingPager.swift in Sources */,
+				5D90B2501F9C235500EA0942 /* StepZero.swift in Sources */,
+				5D90B2521F9C237400EA0942 /* StepOne.swift in Sources */,
+=======
 				DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */,
 				DA73C81F1F9C111800622166 /* PetCell.swift in Sources */,
 				DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */,
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
 				DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */,
+>>>>>>> e5c7e04412fad99658bdf5561bc1c26938812467
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
+				5D90B2561F9C239B00EA0942 /* StepThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +422,15 @@
 			baseConfigurationReference = 2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				DEVELOPMENT_TEAM = P4SGG29KG7;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.abreuboom.bARk;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yasmeen.bARk;
+>>>>>>> edcf958d52f178b75a248b198a42f50c02f5827d
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,10 +442,15 @@
 			baseConfigurationReference = 199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				DEVELOPMENT_TEAM = P4SGG29KG7;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = com.abreuboom.bARk;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yasmeen.bARk;
+>>>>>>> edcf958d52f178b75a248b198a42f50c02f5827d
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
