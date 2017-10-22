@@ -7,17 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D90B2451F9BF77D00EA0942 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */; };
+		5D90B2501F9C235500EA0942 /* StepZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B24F1F9C235500EA0942 /* StepZero.swift */; };
+		5D90B2521F9C237400EA0942 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2511F9C237400EA0942 /* StepOne.swift */; };
+		5D90B2541F9C238A00EA0942 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2531F9C238A00EA0942 /* StepTwo.swift */; };
+		5D90B2561F9C239B00EA0942 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90B2551F9C239B00EA0942 /* StepThree.swift */; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
 		AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC85661F18B8C600D43B9B /* art.scnassets */; };
 		AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ViewController.swift */; };
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
-		DA66DB431F9BADEE007386BB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */; };
 		DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA66DB441F9BB285007386BB /* dogBreed.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
+		5D90B24F1F9C235500EA0942 /* StepZero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepZero.swift; sourceTree = "<group>"; };
+		5D90B2511F9C237400EA0942 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
+		5D90B2531F9C238A00EA0942 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
+		5D90B2551F9C239B00EA0942 /* StepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -26,7 +35,6 @@
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		DA66DB441F9BB285007386BB /* dogBreed.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = dogBreed.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -41,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D90B24E1F9C21B800EA0942 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				5D90B24F1F9C235500EA0942 /* StepZero.swift */,
+				5D90B2511F9C237400EA0942 /* StepOne.swift */,
+				5D90B2531F9C238A00EA0942 /* StepTwo.swift */,
+				5D90B2551F9C239B00EA0942 /* StepThree.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
 		AEEC85581F18B8C600D43B9B = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +79,16 @@
 		AEEC85631F18B8C600D43B9B /* CoreML in ARKit */ = {
 			isa = PBXGroup;
 			children = (
+				5D90B24E1F9C21B800EA0942 /* Steps */,
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
 				AEEC85661F18B8C600D43B9B /* art.scnassets */,
 				AEEC85681F18B8C600D43B9B /* ViewController.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
+				5D90B2441F9BF77D00EA0942 /* OnboardingPager.swift */,
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
 				DA66DB441F9BB285007386BB /* dogBreed.mlmodel */,
-				DA66DB421F9BADEE007386BB /* Inceptionv3.mlmodel */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -145,10 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D90B2541F9C238A00EA0942 /* StepTwo.swift in Sources */,
 				DA66DB451F9BB285007386BB /* dogBreed.mlmodel in Sources */,
 				AEEC85691F18B8C600D43B9B /* ViewController.swift in Sources */,
-				DA66DB431F9BADEE007386BB /* Inceptionv3.mlmodel in Sources */,
+				5D90B2451F9BF77D00EA0942 /* OnboardingPager.swift in Sources */,
+				5D90B2501F9C235500EA0942 /* StepZero.swift in Sources */,
+				5D90B2521F9C237400EA0942 /* StepOne.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
+				5D90B2561F9C239B00EA0942 /* StepThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,10 +309,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				DEVELOPMENT_TEAM = P4SGG29KG7;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompanyname.CoreML-in-ARKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yasmeen.bARk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,10 +324,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				DEVELOPMENT_TEAM = P4SGG29KG7;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompanyname.CoreML-in-ARKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yasmeen.bARk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
