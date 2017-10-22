@@ -1,4 +1,4 @@
-## bARky - _ pet finding assistant _
+## bARky - _pet finding assistant_
 
 # Inspiration
 Looking for pets to adopt online is enormously stressful as you're either dealing with an outdated website or shelters that aren't in your area. Moreover, we wanted to tap into the joy that people find when you see a cute dog on the street. Most people would probably take a picture of the adorable canine to share with their friends, but what if you could also take a picture of it to adopt one of your own? We wanted to find a simpler, more fun way to discover your next doggo!
