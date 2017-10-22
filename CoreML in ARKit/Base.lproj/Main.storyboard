@@ -147,6 +147,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mkm-BN-Xbv" secondAttribute="height" multiplier="1:1" id="7gu-Ke-qAl"/>
                                                         <constraint firstAttribute="width" constant="75" id="baH-Oe-Ytx"/>
+                                                        <constraint firstAttribute="height" constant="75" id="cF7-K3-wRV"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGp-yC-MIY">

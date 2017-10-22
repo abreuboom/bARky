@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireImage
 
 class PetCell: UITableViewCell {
-
+    
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -23,14 +23,22 @@ class PetCell: UITableViewCell {
             photoView.image = nil
             compatibilityView.image = nil
             
+            photoView.layer.cornerRadius = photoView.frame.width/2
+            photoView.mask?.clipsToBounds = true
+            
             let name = (pet["name"] as! [String: Any])["$t"] as! String
             let mix = (pet["mix"] as! [String: Any])["$t"] as! String
             let age = (pet["age"] as! [String: Any])["$t"] as! String
             let media = pet["media"] as! [String: Any]
-            let photosDict = media["photos"] as! [String: Any]
-            let photos = photosDict["photo"] as! [[String: Any]]
-            let photoDict = photos[0]
-            let photoUrl = URL(string: photoDict["$t"] as! String)
+            if let photosDict = media["photos"] as? [String: Any] {
+                let photos = photosDict["photo"] as! [[String: Any]]
+                let photoDict = photos[0]
+                let photoUrlString = photoDict["$t"] as! String
+                let photoUrl = URL(string: photoUrlString)
+                photoView.af_setImage(withURL: photoUrl!)
+                
+                print(photoUrl!)
+            }
             
             nameLabel.text = name
             ageLabel.text = age
@@ -43,13 +51,13 @@ class PetCell: UITableViewCell {
                 breedLabel.text = breed
             }
             
-            Alamofire.request(photoUrl!).responseImage { (response) in
-                if let imageData = response.result.value {
-                    let image = imageData.af_imageRounded(withCornerRadius: 25)
-                    self.photoView?.image = image
-                }
-            }
-            photoView.af_setImage(withURL: photoUrl!)
+            //            Alamofire.request(photoUrl!).responseImage { (response) in
+            //                if let imageData = response.result.value {
+            //                    let image = imageData.af_imageRounded(withCornerRadius: 25)
+            //                    self.photoView?.image = image
+            //                }
+            //            }
+            
         }
     }
     
@@ -57,11 +65,11 @@ class PetCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

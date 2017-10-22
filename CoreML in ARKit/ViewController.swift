@@ -244,8 +244,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             // Print Classifications
-            print(classifications)
-            print("--")
+            //print(classifications)
+            //print("--")
             
             
             // Display Debug Text on screen

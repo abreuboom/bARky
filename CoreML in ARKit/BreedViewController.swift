@@ -33,6 +33,10 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
         gestureDown.direction = .down
         topView.addGestureRecognizer(gestureDown)
         
+        DispatchQueue.main.async() {
+            self.tableView.reloadData()
+        }
+        
         // Do any additional setup after loading the view.
     }
     
