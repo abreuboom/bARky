@@ -26,7 +26,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // COREML
     var visionRequests = [VNRequest]()
     let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml") // A Serial Queue
-    @IBOutlet weak var debugTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -246,12 +245,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             // Print Classifications
             //print(classifications)
             //print("--")
-            
-            
-            // Display Debug Text on screen
-            var debugText:String = ""
-            debugText += classifications
-            self.debugTextView.text = debugText
             
             // Store the latest prediction
             var objectName:String = "…"

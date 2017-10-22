@@ -8,7 +8,20 @@
 
 import Foundation
 import UIKit
-class OnboardingPager : UIPageViewController {
+
+class OnboardingPager : UIPageViewController, UIPageViewControllerDelegate {
+    
+    override func viewDidLoad() {
+        // Set the dataSource and delegate in code.
+        // I can't figure out how to do this in the Storyboard!
+        dataSource = self
+        delegate = self
+        // this sets the background color of the built-in paging dots
+        view.backgroundColor = .darkGray
+        
+        // This is the starting point.  Start with step zero.
+        setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
+    }
     
     func getStepZero() -> StepZero {
         return storyboard!.instantiateViewController(withIdentifier: "StepZero") as! StepZero
@@ -25,12 +38,6 @@ class OnboardingPager : UIPageViewController {
     func getStepThree() -> StepThree {
         return storyboard!.instantiateViewController(withIdentifier: "StepThree") as! StepThree
     }
-    override func viewDidLoad() {
-        view.backgroundColor = .darkGray
-        dataSource = self
-        setViewControllers([getStepZero()], direction: .forward, animated: false, completion: nil)
-    }
-    
 }
 
 extension OnboardingPager : UIPageViewControllerDataSource {
